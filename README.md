@@ -65,3 +65,6 @@ Studio can import and later own them.
 
 See [CONNECTING_FIGMA.md](CONNECTING_FIGMA.md) for the exact steps used to render
 this Button into Figma (free plan) and the plan for wiring up Tokens Studio.
+
+To expose your Storybook publicly for the plugin without any account (via a free
+Cloudflare quick tunnel), see [CLOUDFLARE_TUNNEL.md](CLOUDFLARE_TUNNEL.md).

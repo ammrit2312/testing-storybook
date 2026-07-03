@@ -1,6 +1,6 @@
 import type { ButtonHTMLAttributes, ReactNode } from 'react';
 import { Icon, type IconName } from '../Icon';
-import './Button.css';
+import { StyledButton, Label } from './Button.styles';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'tertiary';
 
@@ -34,22 +34,17 @@ export function Button({
   iconSize = 16,
   iconPosition = 'left',
   type = 'button',
-  className,
   ...rest
 }: ButtonProps) {
-  const classNames = ['btn', `btn--${variant}`, className]
-    .filter(Boolean)
-    .join(' ');
-
   const icon = iconName ? (
     <Icon name={iconName} size={iconSize} />
   ) : null;
 
   return (
-    <button type={type} className={classNames} {...rest}>
+    <StyledButton type={type} $variant={variant} {...rest}>
       {iconPosition === 'left' && icon}
-      <span className="btn__label">{children}</span>
+      <Label>{children}</Label>
       {iconPosition === 'right' && icon}
-    </button>
+    </StyledButton>
   );
 }
