@@ -1,0 +1,29 @@
+.demo {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  font-family: var(--font-family-base);
+  color: var(--color-slate-900);
+}
+
+.demo h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.demo__group {
+  margin-top: 32px;
+}
+
+.demo__group h2 {
+  font-size: 16px;
+  color: var(--color-slate-700);
+  margin-bottom: 12px;
+}
+
+.demo__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
